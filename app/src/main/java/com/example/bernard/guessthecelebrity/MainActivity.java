@@ -233,8 +233,10 @@ public class MainActivity extends AppCompatActivity {
                 firstWrongAnswer = wrongAnswerInt;
             } else if (secondWrongAnswer == -1 && wrongAnswerInt != firstWrongAnswer) {
                 secondWrongAnswer = wrongAnswerInt;
-            } else {
+            } else if (wrongAnswerInt == secondWrongAnswer || wrongAnswerInt == firstWrongAnswer){
                 continue;
+            } else {
+                // do nothing
             }
 
             if (btnA.getText().equals("")) {
